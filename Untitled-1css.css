@@ -92,8 +92,15 @@ header {
     padding: 20px 0; /* Padding tetap sama */
 }
 
+nav {
+    /* Ini adalah nav desktop */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 nav a {
-    margin: 0 15px;
+    margin: 0; /* Dihapus margin, diganti gap di parent */
     color: var(--text);
     text-decoration: none;
     transition: color 0.3s ease;
@@ -117,6 +124,20 @@ nav a:hover {
 .sub {
     color: var(--muted);
     font-size: 14px;
+}
+
+/* PERUBAHAN BARU: Tombol Hamburger 
+  Awalnya disembunyikan di desktop
+*/
+.menu-toggle {
+    display: none; /* Sembunyi di desktop */
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 h1 {
@@ -200,7 +221,7 @@ h3 {
     border: 1px solid var(--border-color);
     
     /* PERUBAHAN BARU: Animasi Staggered
-      Akan di-delay berdasarkan urutannya
+    /* Akan di-delay berdasarkan urutannya
     */
     opacity: 0; /* Mulai dari transparan */
     animation: fadeIn 0.5s ease-out forwards;
@@ -352,7 +373,7 @@ footer {
     margin-bottom: 10px;
     
     /* PERUBAHAN BARU: Animasi Staggered
-      Muncul satu per satu
+    /* Muncul satu per satu
     */
     opacity: 0; /* Mulai transparan */
     animation: slideInLeft 0.5s ease-out forwards;
@@ -432,4 +453,96 @@ footer {
     background-color: var(--accent1);
     color: white;
     transform: translateY(-2px); /* Efek 'angkat' saat hover */
+}
+
+
+/* =================================== */
+/* PERUBAHAN BARU: MEDIA QUERY RESPONSIVE */
+/* =================================== */
+
+@media (max-width: 768px) {
+    
+    /* --- Navigasi Mobile --- */
+    
+    .menu-toggle {
+        display: block; /* Tampilkan tombol hamburger */
+    }
+
+    .nav {
+        /* Memastikan brand dan tombol hamburger sejajar */
+        justify-content: space-between;
+    }
+
+    nav {
+        /* Sembunyikan nav desktop */
+        display: none; 
+
+        /* Ubah jadi menu mobile (vertikal) */
+        flex-direction: column;
+        width: 100%; /* Lebar penuh */
+        background: var(--card-dark);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 15px;
+
+        /* Posisi absolut agar 'turun' dari header */
+        position: absolute;
+        top: 80%; /* Tepat di bawah header */
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%; /* Sesuaikan dengan container */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--border-color);
+    }
+
+    nav.show-menu {
+        display: flex; /* Tampilkan menu saat di-klik */
+        animation: fadeIn 0.3s ease-out; /* Animasi muncul */
+    }
+
+    nav a {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav .btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* --- Hero Section Mobile --- */
+    
+    .hero {
+        flex-direction: column-reverse; /* Balik urutan, gambar di atas */
+        margin: 40px 0; /* Kurangi margin */
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 90%; /* Jangan 100% agar tidak terlalu besar */
+        max-width: 350px;
+        animation: none; /* Matikan animasi float di mobile */
+    }
+
+    .hero-card {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 32px; /* Kecilkan font H1 */
+    }
+
+    /* --- Halaman Detail Mobile --- */
+    .page-detail .container {
+        padding: 25px 20px; /* Kurangi padding */
+        width: 100%;
+    }
+
+    .page-detail h1 {
+        font-size: 2rem; /* Kecilkan font H1 */
+    }
 }
