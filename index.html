@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pusat Belajar — Membangun Masa Depan</title>
+    <link rel="stylesheet" href="Untitled-1css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2d9b8d6f8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <div class="logo"><i class="fas fa-graduation-cap"></i></div>
+                <div>
+                    <strong>Pusat Belajar</strong><br>
+                    <span class="sub">Belajar. Tingkatkan. Sukses.</span>
+                </div>
+            </div>
+            <nav>
+                <a href="#courses">Kursus</a>
+                <a href="#contact">Kontak</a>
+                <button class="btn" id="daftarBtn">Daftar Gratis</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-card">
+                <h1>Tingkatkan Skill Anda, Tentukan Masa Depan Anda</h1>
+                <p class="sub">Mulailah perjalanan belajar Anda bersama kami. Kursus yang dirancang oleh ahli industri untuk membantu Anda sukses.</p>
+                <button class="btn" id="tryBtn">Mulai Sekarang</button>
+            </div>
+            <img class="hero-img" src="images/landingpage.jpg" alt="Diskusi tim">
+        </section>
+
+        <section id="courses">
+            <h2>Kursus Populer</h2>
+            <div class="cards">
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format" alt="Matematika">
+                    <h3>Matematika Efektif</h3>
+                    <p class="meta">8 modul • Logika & Kalkulus</p>
+                    <a href="matematika.html" class="btn">Ambil Kursus</a>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format" alt="Bahasa Inggris">
+                    <h3>Bahasa Inggris Praktis</h3>
+                    <p class="meta">6 modul • Akses seumur hidup</p>
+                    <a href="inggris.html" class="btn">Ambil Kursus</a>
+                </article>
+
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format" alt="Pemrograman">
+                    <h3>Pemrograman Pemula</h3>
+                    <p class="meta">10 modul • Proyek akhir</p>
+                    <a href="pemrograman.html" class="btn">Ambil Kursus</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontak & Daftar</h2>
+            <!-- 
+              PERUBAHAN:
+              Ganti XXXXXX dengan ID Formspree unik Anda!
+            -->
+            <form id="contactForm" action="https://formspree.io/f/xblqrngr" method="POST">
+                <label>Nama</label>
+                <!-- PERUBAHAN: Menambahkan name="name" -->
+                <input type="text" id="name" name="name" required>
+
+                <label>Email</label>
+                <!-- PERUBAHAN: Menambahkan name="email" -->
+                <input type="email" id="email" name="email" required>
+
+                <label>Pilih Kursus</label>
+                <!-- PERUBAHAN: Menambahkan name="interest" -->
+                <select id="interest" name="interest">
+                    <option>Matematika</option>
+                    <option>Bahasa Inggris</option>
+                    <option>Pemrograman</option>
+                </select>
+
+                <button class="btn" type="submit">Kirim</button>
+                <p id="formMsg" style="margin-top: 10px; font-size: 14px;"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2024 Pusat Belajar. All rights reserved.</p>
+    </footer>
+
+    <script src="Untitled-1js.js"></script>
+</body>
+
+</html>
