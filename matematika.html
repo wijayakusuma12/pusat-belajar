@@ -4,12 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kursus Matematika - Pusat Belajar</title>
-    <!-- CSS sekarang terpusat -->
     <link rel="stylesheet" href="Untitled-1css.css">
-    <!-- Font di-load di file CSS utama, tapi kita biarkan di sini untuk fallback jika diperlukan -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Menambahkan Font Awesome (Wajib ada) -->
+    <script src="https://kit.fontawesome.com/a2d9b8d6f8.js" crossorigin="anonymous"></script>
 </head>
-<!-- Menambahkan class 'page-detail' untuk styling khusus -->
 <body class="page-detail">
     <div class="container">
         <h1>Matematika Efektif</h1>
@@ -29,12 +28,18 @@
             <li>Modul 8: Ujian Akhir & Sertifikasi</li>
         </ul>
 
-        <h3>Instruktur</h3>
-        <p><strong>Prof. Indah Cahyani, M.Sc.</strong><br>
-           Seorang akademisi dengan 15 tahun pengalaman mengajar kalkulus dan statistika.</p>
+        <div class="instructor-card">
+            <h3>Instruktur</h3>
+            <p><strong>Prof. Indah Cahyani, M.Sc.</strong><br>
+               Seorang akademisi dengan 15 tahun pengalaman mengajar kalkulus dan statistika.</p>
+        </div>
         
-        <!-- FIX: Mengubah link yang rusak dari 'Untitled-1html.html' ke 'index.html' -->
-        <a href="index.html" class="btn-back">Kembali ke Halaman Utama</a>
+        <!-- 
+          PERUBAHAN BARU: Menambahkan icon panah
+        -->
+        <a href="index.html" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Kembali ke Halaman Utama
+        </a>
     </div>
 </body>
 </html>
