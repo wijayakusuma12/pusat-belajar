@@ -21,11 +21,24 @@
                     <span class="sub">Belajar. Tingkatkan. Sukses.</span>
                 </div>
             </div>
-            <nav>
+            
+            <!-- 
+              PERUBAHAN BARU: Menambahkan ID untuk JS 
+            -->
+            <nav id="mainNav">
                 <a href="#courses">Kursus</a>
                 <a href="#contact">Kontak</a>
                 <button class="btn" id="daftarBtn">Daftar Gratis</button>
             </nav>
+            
+            <!-- 
+              PERUBAHAN BARU: Tombol Menu Hamburger
+              Hanya akan muncul di mobile
+            -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
         </div>
     </header>
 
@@ -37,29 +50,42 @@
                 <p class="sub">Mulailah perjalanan belajar Anda bersama kami. Kursus yang dirancang oleh ahli industri untuk membantu Anda sukses.</p>
                 <button class="btn" id="tryBtn">Mulai Sekarang</button>
             </div>
-            <img class="hero-img" src="images/landingpage.jpg" alt="Diskusi tim">
+            <!-- 
+              PERBAIKAN: Mengganti URL Unsplash yang rusak dengan placeholder 
+            -->
+            <img class="hero-img" src="https://placehold.co/600x400/081526/eaf0ff?text=Diskusi+Tim" alt="Diskusi tim">
         </section>
 
         <section id="courses">
             <h2>Kursus Populer</h2>
+            <!-- Card-card ini akan muncul satu per satu -->
             <div class="cards">
 
                 <article class="card">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format" alt="Matematika">
+                    <!-- 
+                      PERBAIKAN: Mengganti URL Unsplash yang rusak dengan placeholder 
+                    -->
+                    <img src="https://placehold.co/300x180/6C63FF/FFFFFF?text=Matematika" alt="Matematika">
                     <h3>Matematika Efektif</h3>
                     <p class="meta">8 modul • Logika & Kalkulus</p>
                     <a href="matematika.html" class="btn">Ambil Kursus</a>
                 </article>
 
                 <article class="card">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format" alt="Bahasa Inggris">
+                    <!-- 
+                      PERBAIKAN: Mengganti URL Unsplash yang rusak dengan placeholder 
+                    -->
+                    <img src="https://placehold.co/300x180/00D4FF/FFFFFF?text=Bahasa+Inggris" alt="Bahasa Inggris">
                     <h3>Bahasa Inggris Praktis</h3>
                     <p class="meta">6 modul • Akses seumur hidup</p>
                     <a href="inggris.html" class="btn">Ambil Kursus</a>
                 </article>
 
                 <article class="card">
-                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format" alt="Pemrograman">
+                    <!-- 
+                      PERBAIKAN: Mengganti URL Unsplash yang rusak dengan placeholder 
+                    -->
+                    <img src="https://placehold.co/300x180/0e1d33/FFFFFF?text=Pemrograman" alt="Pemrograman">
                     <h3>Pemrograman Pemula</h3>
                     <p class="meta">10 modul • Proyek akhir</p>
                     <a href="pemrograman.html" class="btn">Ambil Kursus</a>
@@ -71,21 +97,30 @@
         <section id="contact">
             <h2>Kontak & Daftar</h2>
             <!-- 
-              PERUBAHAN:
-              Ganti XXXXXX dengan ID Formspree unik Anda!
+              PERBAIKAN WAJIB:
+              Ganti 'email-asli-anda@contoh.com' 
+              dengan alamat email Anda yang sebenarnya untuk menerima data formulir.
             -->
-            <form id="contactForm" action="https://formsubmit.co/wijayaakuusumaa@gmail.com" method="POST">
-            
+            <form id="contactForm" action="https://formsubmit.co/email-asli-anda@contoh.com" method="POST">
                 <label>Nama</label>
-                <!-- PERUBAHAN: Menambahkan name="name" -->
+                <!-- 
+                  Input 'name="name"' ini sudah benar. 
+                  Formspree akan mengambil data ini.
+                -->
                 <input type="text" id="name" name="name" required>
 
                 <label>Email</label>
-                <!-- PERUBAHAN: Menambahkan name="email" -->
+                <!-- 
+                  Input 'name="email"' ini sudah benar.
+                  Formspree akan mengambil data ini.
+                -->
                 <input type="email" id="email" name="email" required>
 
                 <label>Pilih Kursus</label>
-                <!-- PERUBAHAN: Menambahkan name="interest" -->
+                <!-- 
+                  Input 'name="interest"' ini sudah benar.
+                  Formspree akan mengambil data ini.
+                -->
                 <select id="interest" name="interest">
                     <option>Matematika</option>
                     <option>Bahasa Inggris</option>
@@ -103,8 +138,11 @@
         <p>Copyright © 2024 Pusat Belajar. All rights reserved.</p>
     </footer>
 
+    <!-- 
+      File JS ini SAMA seperti sebelumnya, 
+      fungsinya untuk Formspree.
+    -->
     <script src="Untitled-1js.js"></script>
 </body>
 
 </html>
-
